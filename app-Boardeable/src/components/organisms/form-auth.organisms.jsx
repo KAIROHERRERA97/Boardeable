@@ -1,6 +1,8 @@
 import React from "react";
+// import axios from "axios";
+import { actions_auth } from "../../constants/auth.constant";
 
-function FormAuthOrganisms({ action = "post" }) {
+function FormAuthOrganisms({ action = "login" }) {
   // formulario de eventos:
   async function handleSubmit(e) {
     e.preventDefault();
@@ -33,7 +35,7 @@ function FormAuthOrganisms({ action = "post" }) {
       </div>
       <div>
         <button className="bg-violet-700 text-white px-8 py-2  rounded-md w-full">
-          Login
+          {action === actions_auth.LOGIN ? "Login" : "Signup "}
         </button>
       </div>
     </form>

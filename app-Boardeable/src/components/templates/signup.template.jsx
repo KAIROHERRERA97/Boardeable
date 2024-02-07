@@ -1,12 +1,13 @@
 import React from "react";
 import BannerAuthTemplate from "./banner-auth.template";
 import FormAuthOrganisms from "../organisms/form-auth.organisms";
+import { actions_auth } from "../../constants/auth.constant";
 
 function SignupTemplate() {
   return (
     <main className="max-w-xs">
       <BannerAuthTemplate></BannerAuthTemplate>
-      <FormAuthOrganisms action={action_auth.SIGNUP}></FormAuthOrganisms>
+      <FormAuthOrganisms action={actions_auth.SIGNUP}></FormAuthOrganisms>
       <div className=" flex flex-row items-center justify-center gap-2">
         <span className="text-sm text-violet-700 font-semibold">
           Login to your Account
