@@ -20,6 +20,7 @@ export function ToastProvider({ children }) {
   }
 
   return(
-    <ToastContext.Provider value={{setErrorToast:setErrorToast, toastInfo:toastInfo}}>{children}</ToastContext.Provider>
+    <ToastContext.Provider 
+    value={{setErrorToast:setErrorToast, toastInfo:toastInfo}}>{children}</ToastContext.Provider>
   )
 }
