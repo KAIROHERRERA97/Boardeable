@@ -1,6 +1,6 @@
-import { createcontext, useState } from "react";
+import { createContext, useState } from "react";
 
-export const ToastContext = createcontext({
+export const ToastContext = createContext({
   error: false,
   message: "",
 });
