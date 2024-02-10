@@ -1,15 +1,25 @@
-import React from "react";
-// import axios from "axios";
+import React, { useContext } from "react";
+import axios from "axios";
 import { actions_auth } from "../../constants/auth.constant";
+import { ToastContext } from "../../context/auth-toast.context";
 
 function FormAuthOrganisms({ action = "login" }) {
+  const { setErrorToast } = useContext(ToastContext);
   // formulario de eventos:
   async function handleSubmit(e) {
     e.preventDefault();
     if (action === actions_auth.LOGIN) {
-      await axios.post("api.../login");
+      try {
+        await axios.post("api.../login");
+      } catch (error) {
+        setErrorToast("Login Incorrect");
+      }
     } else if (action === actions_auth.SIGNUP) {
-      await axios.post("api.../signup");
+      try {
+        await axios.post("api.../signup");
+      } catch (error) {
+        setErrorToast("Signup incorrect");
+      }
     }
   }
 

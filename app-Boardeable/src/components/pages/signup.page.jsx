@@ -4,12 +4,16 @@ import { ToastContext } from "../../context/auth-toast.context";
 import ToastErrorMolecule from "../molecules/toast.error.molecule";
 
 export default function SignupPage() {
-  const {toastInfo} = useContext(ToastContext);
+  const { toastInfo } = useContext(ToastContext);
 
   return (
     <div className="mt-24 flex justify-center relative">
       <SignupTemplate></SignupTemplate>
-      {toastInfo.error ? <ToastErrorMolecule></ToastErrorMolecule> : ""}
+      {toastInfo.error ? (
+        <ToastErrorMolecule message={toastInfo.message}></ToastErrorMolecule>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

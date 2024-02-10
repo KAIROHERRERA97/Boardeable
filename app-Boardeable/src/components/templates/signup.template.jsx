@@ -8,8 +8,8 @@ function SignupTemplate() {
     <main className="max-w-xs">
       <BannerAuthTemplate></BannerAuthTemplate>
       <FormAuthOrganisms action={actions_auth.SIGNUP}></FormAuthOrganisms>
-      <div className=" flex flex-row items-center justify-center gap-2">
-        <span className="text-sm text-violet-700 font-semibold">
+      <div className=" flex flex-row items-center justify-center text-violet-700 font-semibold gap-2">
+        <span className="text-sm">
           Login to your Account
         </span>
         <span>
