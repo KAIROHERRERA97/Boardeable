@@ -5,11 +5,13 @@ import "./main.css";
 import SignupPage from "./components/pages/signup.page";
 import { ToastProvider } from "./context/auth-toast.context";
 import AccountPage from "./components/pages/account.page";
+import HomePage from "./components/pages/home.page";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ToastProvider>
-      <AccountPage></AccountPage>
+      <HomePage></HomePage>
+      {/* <AccountPage></AccountPage> */}
       {/* <SignupPage></SignupPage> */}
       {/* <LoginPage></LoginPage> */}
     </ToastProvider>

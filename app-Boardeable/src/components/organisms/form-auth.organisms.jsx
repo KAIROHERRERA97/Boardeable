@@ -44,7 +44,7 @@ function FormAuthOrganisms({ action = "login" }) {
         />
       </div>
       <div>
-        <button className="bg-violet-700 text-white px-8 py-2  rounded-md w-full">
+        <button className="bg-violet-700 text-white shadow-md px-8 py-2  rounded-md w-full">
           {action === actions_auth.LOGIN ? "Login" : "Signup "}
         </button>
       </div>
